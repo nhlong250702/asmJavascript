@@ -11,6 +11,7 @@
 button {
     border-radius: 50%;
     background-color: palevioletred;
+    font-size: 30px;
 }
 
 #bo-suu-tap .img button {
