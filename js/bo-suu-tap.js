@@ -7,15 +7,19 @@ var arrSlide = [
 
 var i = 0;
 var vSlideImg = document.getElementById("mySlide");
+// var indexImg;
 
 function fNext() {
     i++;
     if (i >= arrSlide.length) i = 0;
     vSlideImg.src = "../images/" + arrSlide[i];
+    document.getElementById("indexSlide").innerHTML = "Ảnh " + i +" /20";
 }
 
 function fPrev() {
     i--;
     if (i < 0) i = arrSlide.length - 1;
     vSlideImg.src = "../images/" + arrSlide[i];
+    document.getElementById("indexSlide").innerHTML = "Ảnh " + i +" /20";
 }
+
