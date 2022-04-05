@@ -7,13 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/dang-ky-thanh-vien.css">
+    <script src="../js/dang-ky-thanh-vien.js"></script>
 </head>
 
 <body>
-    <div id="dang-ky">
+    <form id="dang-ky" >
         <h1>Đăng ký thành viên</h1>
         <p>Mã sinh viên</p>
-        <input class="khuon" type="text">
+        <input class="khuon" type="text" id="id">
         <p>Họ và Tên</p>
         <input class="khuon" type="text">
         <p>Email</p>
@@ -25,15 +26,15 @@
         </div>
         <p>Sở thích</p>
         <div class="khuon">
-            <input type="checkbox">Đọc sách
-            <input type="checkbox">Du lịch
-            <input type="checkbox">Âm nhạc
-            <input type="checkbox">Ẩm thực
-            <input type="checkbox">Khác
+            <input type="checkbox" name="hobbies">Đọc sách
+            <input type="checkbox" name="hobbies">Du lịch
+            <input type="checkbox" name="hobbies">Âm nhạc
+            <input type="checkbox" name="hobbies">Ẩm thực
+            <input type="checkbox" name="hobbies">Khác
+            
         </div>
         <p>Quốc tịch</p>
-        <select class="khuon" name="">
-            <option value="">Chọn quốc tịch</option>
+        <select class="khuon">
             <option value="">Việt Nam</option>
             <option value="">Campuchia</option>
             <option value="">Lào</option>
@@ -41,8 +42,8 @@
         </select>
         <p>Ghi chú</p>
         <textarea name="" cols="45" rows="5"></textarea> <br>
-        <button>Đăng ký</button>
-    </div>
+        <button onclick="validate()">Đăng ký</button>
+    </form>
 </body>
 
 </html>
