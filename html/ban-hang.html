@@ -8,77 +8,102 @@
     <link rel="stylesheet" href="../css/ban-hang.css">
 </head>
 <body>
-    <div id="main">
-        <h3>BÁN HÀNG</h3>
-        <select name="">
-            <option value="">Mức giá</option>
-            <option value="">100</option>
-            <option value="">200</option>
-            <option value="">300</option>
+    <div class="ban-hang text-center">
+        <h2 class="text-center">BÁN HÀNG</h2>
+        <br>
+
+        <span class="form-massage "style='color:red'>Mời bạn chọn mức giá</span>
+        <br>
+        <select name="" id="muc-gia" onchange="myFunction()">
+            <option value="">Chọn Mức giá</option>
+            <option value="1">0-200</option>
+            <option value="2">200-500</option>
+            <option value="3">500-1200</option>
+            <option value="4">Tất cả sản phẩm</option>
         </select>
-        <hr>
-        <table border="1">
+        <br>
+        <br>
+        <!-- <hr> -->
+        <br>
+        <!-- border="1"  -->
+        <table border='1' Cellpadding="2" cellspacing="2" onchange="myTinhTien()">
             <tr>
-                <td><input type="checkbox"></td>
-                <td>Hàng hóa</td>
-                <td>Đơn giá</td>
-                <td>Số Lượng</td>
-                <td>Thành tiền</td>
+                <!-- tiêu dề -->
+                <th>
+                    <!-- <input type="checkbox" name="" id=""> -->
+                </th>
+                <th>Hàng hóa</th>
+                <th>Đơn giá</th>
+                <th style="width: 150px;">Số lượng</th>
+                <th>Thành tiền</th>
             </tr>
+            <!-- hàng tiếp theo -->
+            <!-- style="display: none;" -->
             <tr>
-                <td><input type="checkbox"></td>
-                <td>iPhone</td>
-                <td>700</td>
-                <td><input type="text" value="0"></td>
-                <td></td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>Iphone 9</td>
+                <td value="700">700</td>
+                <td><input type="number" value="0" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!--  hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox" checked></td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Samsung</td>
-                <td>400</td>
-                <td><input type="text" value="1"></td>
-                <td>400</td>
+                <td value="400">400</td>
+                <td><input type="number" value="0" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox" ></td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Nokia</td>
-                <td>100</td>
-                <td><input type="text" value="0"></td>
-                <td></td>
+                <td value="100">100</td>
+                <td><input type="number" value=0 disabled placeholder="0" value="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Sony Xperia</td>
-                <td>450</td>
-                <td><input type="text" value="0"></td>
-                <td></td>
+                <td value="450">450</td>
+                <td><input type="number" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Motorola</td>
-                <td>180</td>
-                <td><input type="text" value="0"></td>
-                <td></td>
+                <td value="180">180</td>
+                <td><input type="number" value="0" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox"></td>
+                <td><input type="checkbox" name="" id=""></td>
                 <td>Oppo</td>
-                <td>600</td>
-                <td><input type="text" value="0"></td>
-                <td></td>
+                <td value="600">600</td>
+                <td><input type="number" value="0" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
             <tr>
-                <td><input type="checkbox" checked></td>
-                <td>Bphone</td>
-                <td>90</td>
-                <td><input type="text" value="2"></td>
-                <td>180</td>
+                <td><input type="checkbox" name="" id=""></td>
+                <td>bphone</td>
+                <td value="90">90</td>
+                <td><input type="number" value="0" disabled placeholder="0"></td>
+                <td value="" class="thanh_tien_1sp"></td>
             </tr>
+            <!-- hàng tiếp theo -->
+
             <tr>
-                <td colspan="4">Tổng</td>
-                <td>580</td>
+                <td colspan="4" style="font-weight: bold;">Tổng</td>
+                <td class="tong"></td>
             </tr>
+            <!-- hàng tiếp theo -->
+            <!-- hàng tiếp theo -->
         </table>
-    </div>
+    </div> <!-- div bảng-->
+    <script src="../js/ban-hang.js"></script>
 </body>
 </html>
