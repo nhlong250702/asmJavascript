@@ -81,15 +81,3 @@ function tong(i, sum) {
     }
     return sum;
 }
-//-------------------------
-var count = 0;
-function datHang() {
-
-    for (var i = 0; i < checkbox.length - 1; i++) {
-        if (checkbox[i].checked) { count++; break }
-        count = 0;
-    }
-    count != 0 ? alert("Chúc Mừng Bạn Đặt Hàng Thành Công") : alert("bạn chưa chọn sản phẩm");
-
-
-}
