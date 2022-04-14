@@ -42,25 +42,53 @@ function myFunction() {
 
 function myTinhTien() {
     var sum = 0;
-    for (var i = 1; i < tr.length - 1; i++) {
-        var kt_checkbox = tr[i].querySelectorAll('td')[0].querySelector('input');
-        if (kt_checkbox.checked) {
-            var kt_soLuong = tr[i].querySelectorAll('td')[3].querySelector('input').value;
+    var kt_checkbox_all = tr[0].querySelectorAll('th')[0].querySelector('input');
+    if (kt_checkbox_all.checked) {
+        for (var i = 1; i < tr.length - 1; i++) {
+            var kt_checkbox = tr[i].querySelectorAll('td')[0].querySelector('input');
 
-            if (kt_soLuong == 0) {
-                tr[i].querySelectorAll("td")[3].querySelector('input').value = 1;
-                tr[i].querySelectorAll('td')[3].querySelector('input').disabled = false;
 
+            // if (kt_checkbox.checked) {
+                var kt_soLuong = tr[i].querySelectorAll('td')[3].querySelector('input').value;
+
+                if (kt_soLuong == 0) {
+                    tr[i].querySelectorAll("td")[3].querySelector('input').value = 1;
+                    tr[i].querySelectorAll('td')[3].querySelector('input').disabled = false;
+
+                }
+            // }
+            else {
+                tr[i].querySelectorAll("td")[3].querySelector('input').value = 0;
+                tr[i].querySelectorAll('td')[3].querySelector('input').disabled = true;
             }
-        }
-        else {
-            tr[i].querySelectorAll("td")[3].querySelector('input').value = 0;
-            tr[i].querySelectorAll('td')[3].querySelector('input').disabled = true;
-        }
-        var tien = tinh(i);
-        tr[i].querySelectorAll('td')[4].innerHTML = tien;
-        sum = tong(i, sum);
+            var tien = tinh(i);
+            tr[i].querySelectorAll('td')[4].innerHTML = tien;
+            sum = tong(i, sum);
 
+        }
+    } else {
+        for (var i = 1; i < tr.length - 1; i++) {
+            var kt_checkbox = tr[i].querySelectorAll('td')[0].querySelector('input');
+
+
+            if (kt_checkbox.checked) {
+                var kt_soLuong = tr[i].querySelectorAll('td')[3].querySelector('input').value;
+
+                if (kt_soLuong == 0) {
+                    tr[i].querySelectorAll("td")[3].querySelector('input').value = 1;
+                    tr[i].querySelectorAll('td')[3].querySelector('input').disabled = false;
+
+                }
+            }
+            else {
+                tr[i].querySelectorAll("td")[3].querySelector('input').value = 0;
+                tr[i].querySelectorAll('td')[3].querySelector('input').disabled = true;
+            }
+            var tien = tinh(i);
+            tr[i].querySelectorAll('td')[4].innerHTML = tien;
+            sum = tong(i, sum);
+
+        }
     }
     tong_tien.innerText = sum;
     giaTien.innerText = `${sum} USD`;
